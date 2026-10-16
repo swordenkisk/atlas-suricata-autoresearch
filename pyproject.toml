@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atlas-suricata-autoresearch"
+version = "0.1.0"
+description = "Offline synthetic-traffic regression harness for Suricata rules"
+requires-python = ">=3.10"
+dependencies = ["scapy>=2.5,<3"]
+
+[project.scripts]
+atlas-suricata-lab = "atlas_suricata_lab:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["atlas_suricata_lab"]
